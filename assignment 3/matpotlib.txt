@@ -1,0 +1,32 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load the CSV file
+data = pd.read_csv('miniproject.csv')
+
+# Line Plot
+plt.figure(figsize=(10, 5))
+plt.plot(data['Year'], data['Average_Temperature'], color='orange', marker='o')
+plt.title('Global Average Temperature (1920 - 2020)')
+plt.xlabel('Year')
+plt.ylabel('Temperature (°C)')
+plt.grid(True)
+plt.show()
+
+# Bar Chart
+plt.figure(figsize=(10, 5))
+plt.bar(data['Year'], data['Average_Temperature'], color='skyblue')
+plt.title('Global Average Temperature by Year')
+plt.xlabel('Year')
+plt.ylabel('Temperature (°C)')
+plt.xticks(rotation=45)
+plt.show()
+
+# Scatter Plot
+plt.figure(figsize=(10, 5))
+plt.scatter(data['Year'], data['Average_Temperature'], c='red')
+plt.title('Scatter of Temperature Over Years')
+plt.xlabel('Year')
+plt.ylabel('Temperature (°C)')
+plt.grid(True)
+plt.show()
